@@ -7,7 +7,8 @@ class DemoRepository {
   Future<PriceEntryPeriods> getPriceEntries() async {
     try {
       final response = await _demoPorvider.getPriceEntries();
-      PriceEntryPeriods list = PriceEntryPeriods.fromJson(response.data);
+      final PriceEntryPeriods list =
+          PriceEntryPeriods.fromJson(response.data as String);
       return list;
     } catch (e) {
       rethrow;

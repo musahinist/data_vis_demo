@@ -25,7 +25,8 @@ class DemoBloc extends Bloc<DemoEvent, DemoState> {
 
         yield DemoPriceEntryLoadedState(priceListPeriods: _priceListPeriods);
       } catch (e) {
-        yield DemoPriceEntryErrorState(error: HttpException.handleError(e));
+        yield DemoPriceEntryErrorState(
+            error: HttpException.handleError(Exception(e)));
       }
     }
   }

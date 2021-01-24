@@ -32,15 +32,15 @@ class PriceEntry {
     if (map == null) return null;
 
     return PriceEntry(
-      d: map['d'],
-      c: map['c'],
+      d: map['d'] as num,
+      c: map['c'] as num,
     );
   }
 
   String toJson() => json.encode(toMap());
 
   factory PriceEntry.fromJson(String source) =>
-      PriceEntry.fromMap(json.decode(source));
+      PriceEntry.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() => 'PriceEntry(d: $d, c: $c)';
