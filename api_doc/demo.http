@@ -1,0 +1,8 @@
+@baseUrl= https://finfree.app/ 
+@contentType= application/json
+@authToken= R29vZCBMdWNr
+
+### GET UNIVERSITY LİST
+# @name university
+GET {{baseUrl}}/demo HTTP/1.1
+Authorization: {{authToken}}
