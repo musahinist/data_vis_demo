@@ -30,65 +30,6 @@ class HttpException implements Exception {
           break;
         case DioErrorType.RESPONSE: //TODO Make them in enumaration
           errorDescription = error.response?.data as String ?? '';
-          // switch (error.response?.data ?? '') {
-          //   case "tokenNotFound":
-          //     errorDescription = labels.exception.tokenNotFound;
-          //     break;
-
-          //   case "usernamePasswordFail":
-          //     errorDescription =
-          //         AppLocalization.getString("kUsernamePasswordFail");
-          //     break;
-
-          //   case "noPermission":
-          //     errorDescription = AppLocalization.getString("kNoPermission");
-          //     break;
-
-          //   case "dataNotFound":
-          //     errorDescription = AppLocalization.getString("kDataNotFound");
-          //     break;
-
-          //   case "pageNotFound":
-          //     errorDescription = AppLocalization.getString("kPageNotFound");
-          //     break;
-
-          //   case "emailMustBeUnique":
-          //     errorDescription =
-          //         AppLocalization.getString("kEmailMustBeUnique");
-          //     break;
-
-          //   case "sessionNotFound":
-          //     errorDescription = AppLocalization.getString("kSessionNotFound");
-          //     break;
-
-          //   case "invalidEmail":
-          //     errorDescription = AppLocalization.getString("kInvalidEmail");
-          //     break;
-
-          //   case "emailNotNull":
-          //     errorDescription = AppLocalization.getString("kEmailNotNull");
-          //     break;
-
-          //   case "surnameNotNull":
-          //     errorDescription = AppLocalization.getString("kSurnameNotNull");
-          //     break;
-
-          //   case "nameNotNull":
-          //     errorDescription = AppLocalization.getString("kNameNotNull");
-          //     break;
-
-          //   case "sizeExceed":
-          //     errorDescription = AppLocalization.getString("kSizeExceed");
-          //     break;
-
-          //   case "birthDateNotNull":
-          //     errorDescription = AppLocalization.getString("kBirthDateNotNull");
-          //     break;
-
-          //   default:
-          //     errorDescription = AppLocalization.getString("kUnknownError");
-          //     break;
-          // }
           break;
         case DioErrorType.SEND_TIMEOUT:
           errorDescription = "kCheckYourConnection";
