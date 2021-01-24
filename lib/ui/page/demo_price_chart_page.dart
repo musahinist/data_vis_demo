@@ -21,7 +21,7 @@ class _DemoPriceChartPageState extends State<DemoPriceChartPage> {
   List<String> periodList = ["1G", "1H", "1A", "3A", "1Y", "5Y"];
   String period;
   List<PriceEntry> priceList;
-
+//When the button is clicked, the priceList is changed according to the appropriate state
   setPeriod() {
     switch (period) {
       case "1G":
@@ -73,11 +73,7 @@ class _DemoPriceChartPageState extends State<DemoPriceChartPage> {
               children: [
                 Expanded(
                   child: Container(
-                      // decoration: BoxDecoration(
-                      //   color: Colors.grey[300],
-                      //   borderRadius:
-                      //       BorderRadius.vertical(top: Radius.circular(5)),
-                      // ),
+                      //This field can be used to display extra data.
                       ),
                 ),
                 SizedBox(
@@ -89,6 +85,7 @@ class _DemoPriceChartPageState extends State<DemoPriceChartPage> {
                   child: BlocBuilder<DemoBloc, DemoState>(
                     cubit: demoBloc,
                     builder: (context, state) {
+                      //Show progress indicator if state is loading, show chart if loaded
                       if (state is DemoPriceEntryLoadedState) {
                         priceListPeriods = state.priceListPeriods;
                         setPeriod();
@@ -120,6 +117,7 @@ class _DemoPriceChartPageState extends State<DemoPriceChartPage> {
                                       period == e ? Colors.white : Colors.grey,
                                 ),
                               ),
+                              //change the time period when clicked and refresh the state
                               onPressed: () {
                                 period = e;
                                 setState(() {});
