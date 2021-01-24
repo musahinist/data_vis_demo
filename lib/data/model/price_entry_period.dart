@@ -1,8 +1,10 @@
 import 'dart:convert';
 
-import 'package:data_visualization/data/model/price_entry.dart';
 import 'package:meta/meta.dart';
 
+import 'price_entry.dart';
+
+//period data model
 class PriceEntryPeriods {
   List<PriceEntry> l1G;
   List<PriceEntry> l1H;
@@ -49,6 +51,7 @@ class PriceEntryPeriods {
     };
   }
 
+//All period data are mapped to the price entry data model
   factory PriceEntryPeriods.fromMap(Map<String, dynamic> map) {
     if (map == null) return null;
 

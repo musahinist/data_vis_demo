@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:meta/meta.dart';
 
+//price entry data model
 class PriceEntry {
   num d;
   num c;

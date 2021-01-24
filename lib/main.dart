@@ -1,5 +1,5 @@
-import 'package:data_visualization/ui/page/demo_price_chart_page.dart';
-import 'package:data_visualization/util/log/log.dart';
+import 'ui/page/demo_price_chart_page.dart';
+import 'util/log/log.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

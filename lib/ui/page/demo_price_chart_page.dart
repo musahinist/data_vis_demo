@@ -1,13 +1,12 @@
 import 'dart:math';
 
-import 'package:data_visualization/data/model/price_entry_period.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:data_visualization/bloc/demo/demo_bloc.dart';
-import 'package:data_visualization/data/model/price_entry.dart';
-
+import '../../bloc/demo/demo_bloc.dart';
+import '../../data/model/price_entry.dart';
+import '../../data/model/price_entry_period.dart';
 import 'demo_price_chart_data.dart';
 
 class DemoPriceChartPage extends StatefulWidget {
@@ -18,6 +17,7 @@ class DemoPriceChartPage extends StatefulWidget {
 class _DemoPriceChartPageState extends State<DemoPriceChartPage> {
   DemoBloc demoBloc;
   PriceEntryPeriods priceListPeriods;
+  //can be done with enum
   List<String> periodList = ["1G", "1H", "1A", "3A", "1Y", "5Y"];
   String period;
   List<PriceEntry> priceList;

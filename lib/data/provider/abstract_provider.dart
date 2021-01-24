@@ -1,5 +1,5 @@
-import 'package:data_visualization/util/http/http_exception.dart';
-import 'package:data_visualization/util/http/http_manager.dart';
+import '../../util/http/http_exception.dart';
+import '../../util/http/http_manager.dart';
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
 

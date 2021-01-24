@@ -1,4 +1,4 @@
-import 'package:data_visualization/data/model/price_entry.dart';
+import '../../data/model/price_entry.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
