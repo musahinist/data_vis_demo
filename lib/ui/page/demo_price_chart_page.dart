@@ -18,7 +18,7 @@ class _DemoPriceChartPageState extends State<DemoPriceChartPage> {
   DemoBloc demoBloc;
   PriceEntryPeriods priceListPeriods;
   //can be done with enum
-  List<String> periodList = ['1G', '1H', '1A', '3A', '1Y', '5Y'];
+  final List<String> periodList = ['1G', '1H', '1A', '3A', '1Y', '5Y'];
   String period;
   List<PriceEntry> priceList;
 //When the button is clicked, the priceList is changed according to the appropriate state
